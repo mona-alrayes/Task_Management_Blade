@@ -15,6 +15,9 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+
+                    <!-- Link to Tasks Index -->
+                    <a class="d-block" href="{{ route('tasks.index') }}" class="btn btn-primary mt-3">View Tasks</a>
                 </div>
             </div>
         </div>

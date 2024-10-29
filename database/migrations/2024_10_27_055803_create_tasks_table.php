@@ -18,6 +18,7 @@ return new class extends Migration
             $table->date('due_date')->nullable(); 
             $table->enum('status', ['Pending', 'Completed'])->default('Pending');
             $table->foreignId('user_id')->constrained(); 
+            $table->softDeletes();
             $table->timestamps();
             $table->index(['title', 'due_date', 'status']);
         });
