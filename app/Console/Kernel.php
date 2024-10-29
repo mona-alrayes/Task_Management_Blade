@@ -19,8 +19,7 @@ class Kernel extends ConsoleKernel
             foreach ($users as $user) {
                 SendEmailJob::dispatch($user->id); 
             }
-        })->everyTenMinutes();
-
+        })->everyMinute();
     }
 
     /**
